@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "82b49849-7d44-43cc-aa12-d1f42b232fc1",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20749305"
+	},
+	"item": [
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "addProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"sandel\", \r\n    \"price\": 1200, \r\n    \"brand\": \"sparx\", \r\n    \"visiblearea\":[414402, 443453,431116,431116,431517],\r\n    \"isActive\": true,\r\n    \"location\": \"mumbai\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/product/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "activeProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/activeProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"activeProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/product/6413e71da3fbac5c0cc09cd3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"6413e71da3fbac5c0cc09cd3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update before active",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"shoes\", \r\n    \"price\": 2900, \r\n    \"brand\": \"nike\", \r\n    \"visiblearea\":[414402, 443453,431116,431116,431517],\r\n    \"isActive\": true,\r\n    \"location\": \"pune\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/product/update/6413eca221633234bc90a009",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"update",
+								"6413eca221633234bc90a009"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/product/search/nike ",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"search",
+								"nike "
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
